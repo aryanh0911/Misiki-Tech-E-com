@@ -10,6 +10,6 @@ import '../app.css';
 	<Navbar />
 </div>
 
-<main class="max-w-[1850px] mx-auto">
+<main class="max-w-[1850px] mx-auto pt-16">
 	<slot />
 </main>

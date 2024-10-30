@@ -1,0 +1,82 @@
+[
+    {
+        "product_id" : 1,
+        "product_name" : "Product-1",
+        "product_image_1" : "/images/product_images/chair-1-gray.jpg",
+        "product_image_2" : "/images/product_images/chair-1-orange.jpg",
+        "product_price" : 60,
+        "price_discount_percent" : 0,
+        "product_colors" : ["gray", "orange"],
+        "bundle" : false
+    },
+    {
+        "product_id" : 2,
+        "product_name" : "Product-2",
+        "product_image_1" : "/images/product_images/plant-1-white.webp",
+        "product_image_2" : "/images/product_images/plant-1-forestgreen.webp",
+        "product_price" : 60,
+        "price_discount_percent" : 30,
+        "product_colors" : ["white", "forestgreen"],
+        "bundle" : true
+    },
+    {
+        "product_id" : 3,
+        "product_name" : "Product-3",
+        "product_image_1" : "/images/product_images/sofa-1-brown.webp",
+        "product_image_2" : "/images/product_images/sofa-1-red.webp",
+        "product_price" : 150,
+        "price_discount_percent" : 25,
+        "product_colors" : ["brown", "red"],
+        "bundle" : false
+    },
+    {
+        "product_id" : 4,
+        "product_name" : "Product-4",
+        "product_image_1" : "/images/product_images/chair-2-brown.jpg",
+        "product_image_2" : "/images/product_images/chair-2-gray.jpg",
+        "product_price" : 60,
+        "price_discount_percent" : 0,
+        "product_colors" : ["brown", "gray"],
+        "bundle" : false
+    },
+    {
+        "product_id" : 5,
+        "product_name" : "Product-5",
+        "product_image_1" : "/images/product_images/sofa-2-orange.webp",
+        "product_image_2" : "/images/product_images/sofa-2-gray.webp",
+        "product_price" : 60,
+        "price_discount_percent" : 0,
+        "product_colors" : ["orange", "gray"],
+        "bundle" : false
+    },
+    {
+        "product_id" : 6,
+        "product_name" : "Product-6",
+        "product_image_1" : "/images/product_images/bed-1-brown.webp",
+        "product_image_2" : "/images/product_images/bed-1-black.webp",
+        "product_price" : 60,
+        "price_discount_percent" : 0,
+        "product_colors" : ["brown", "black"],
+        "bundle" : false
+    },
+    {
+        "product_id": 7,
+        "product_name" : "Product-7",
+        "product_image_1" : "/images/product_images/chair-3-brown.jpg",
+        "product_image_2" : "/images/product_images/chair-3-gray.jpg",
+        "product_price" : 60,
+        "price_discount_percent" : 0,
+        "product_colors" : ["brown", "gray"],
+        "bundle" : false
+    },
+    {
+        "product_id" : 8,
+        "product_name" : "Product-8",
+        "product_image_1" : "/images/product_images/chair-4-gray.jpg",
+        "product_image_2" : "/images/product_images/chair-4-blue.jpg",
+        "product_price" : 60,
+        "price_discount_percent" : 0,
+        "product_colors" : ["gray", "blue"],
+        "bundle" : false
+    }
+]

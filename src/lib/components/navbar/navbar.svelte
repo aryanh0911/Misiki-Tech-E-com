@@ -4,7 +4,7 @@
 
 
 
-<nav class="p-4 px-8 flex justify-between">
+<nav class="p-4 px-8 flex justify-between fixed top-0 z-[999] w-full bg-[#ffffff]">
     <div class="nav-left flex gap-8">
         <div class="logo flex items-center justify-center">
             <a href="/"><img src="/images/Ella-black.webp" alt=""></a>
@@ -23,7 +23,7 @@
                     placeholder="Search entire store here"
                     autocomplete="off"
                     aria-label="search entire store here"
-                    class="px-3 pl-8 py-2 bg-[#F6F6F6] placeholder-gray-400 rounded-lg border-none"
+                    class="px-3 pl-8 py-2 bg-[#F6F6F6] placeholder-gray-400 rounded-md border-none"
                 >
             </div>
         </div>
