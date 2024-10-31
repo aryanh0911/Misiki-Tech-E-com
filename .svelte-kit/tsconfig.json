@@ -3,6 +3,12 @@
 		"paths": {
 			"@/*": [
 				"../path/to/lib/*"
+			],
+			"$lib": [
+				"../src/lib"
+			],
+			"$lib/*": [
+				"../src/lib/*"
 			]
 		},
 		"rootDirs": [

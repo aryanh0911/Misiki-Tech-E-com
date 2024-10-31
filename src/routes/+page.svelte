@@ -1,6 +1,5 @@
 <script>
 	import SelectMenu from "$lib/components/select-menu/select-menu.svelte";
-	import { each } from "svelte/internal";
     import ProductsData from "$lib/data/products-data/productsData.json"
 	import ProductCard from "$lib/components/product-card/product-card.svelte";
 
@@ -55,8 +54,7 @@
                 <div class="grid grid-cols-4 gap-4 gap-y-16">
                     {#each ProductsData as product}
                         <ProductCard
-                            productImage_1={product.product_image_1}
-                            productImage_2={product.product_image_2}
+                            productImages={product.product_images}
                             productName={product.product_name}
                             productPrice={product.product_price}
                             priceDiscount={product.price_discount_percent}
