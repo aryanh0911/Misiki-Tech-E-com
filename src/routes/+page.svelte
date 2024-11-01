@@ -1,8 +1,14 @@
-<script>
+<script lang="ts">
 	import SelectMenu from "$lib/components/select-menu/select-menu.svelte";
     import ProductsData from "$lib/data/products-data/productsData.json"
 	import ProductCard from "$lib/components/product-card/product-card.svelte";
+	import SelectItem from "$lib/components/ui/select/select-item.svelte";
 
+    let viewAs = "Col-4";
+
+    function handleViewChange(newView : string) {
+        viewAs = newView;
+    }
 </script>
 
 
@@ -26,8 +32,8 @@
 
         <section class="products mt-8">
             <header class="flex justify-between pr-3 mb-4">
-                <div>
-                    <SelectMenu
+                <div class="view-as">
+                    <SelectMenu 
                         menuItems={["Rows", "Col-1", "Col-2", "Col-3", "Col-4"]}
                         placeHolder={"view as"}
                     />
@@ -37,7 +43,7 @@
                         <p class="flex items-center">Items per page</p>
                         <SelectMenu
                             menuItems={[10,15,20,25,30,50]}
-                            placeHolder={10}
+                            placeHolder={"10"}
                         />
                     </div>
                     <div class="flex gap-2">
@@ -51,7 +57,16 @@
             </header>
             
             <div class="products-content p-4 mb-24">
-                <div class="grid grid-cols-4 gap-4 gap-y-16">
+                <div class={`grid gap-4 gap-y-16
+                    ${
+                        viewAs === "Col-1"? "grid-cols-1" :
+                        viewAs === "Col-2"? "grid-cols-2" :
+                        viewAs === "Col-3"? "grid-cols-3" :
+                        viewAs === "Col-4"? "grid-cols-4" :
+                        "grid-cols-4" //default fallback
+                    }
+                `}
+                >
                     {#each ProductsData as product}
                         <ProductCard
                             productImages={product.product_images}
@@ -67,3 +82,4 @@
         </section>
     </div>
 </div>
+
