@@ -2,22 +2,44 @@
 	import SelectMenu from "$lib/components/select-menu/select-menu.svelte";
     import ProductsData from "$lib/data/products-data/productsData.json"
 	import ProductCard from "$lib/components/product-card/product-card.svelte";
-	import SelectItem from "$lib/components/ui/select/select-item.svelte";
+	import Accordion from "$lib/components/accordion/accordion.svelte";
+    
+    const sidePaneElements = [
+        {item: "Categories"},
+        {item: "Price"},
+        {item: "Brand"},
+        {item: "Product Type"},
+        {item: "Availability"},
+        {item: "Color"},
+        {item: "Size"},
+        {item: "More Filters"},
+        {item: "Featured Products"},
+    ]
 
     let viewAs = "Col-4";
-
-    function handleViewChange(newView : string) {
-        viewAs = newView;
+    function handleViewAs(value : string | number){
+        viewAs = String(value);
     }
+
 </script>
 
 
-<div class="grid grid-cols-6 gap-x-3">
-    <div class="side-pane h-screen bg-slate-600 col-span-1">
-        
+<div class="flex gap-x-3">
+
+    <!-- Side Panel -->
+    <div class="side-pane h-screen bg-slate-300 pt-8 min-w-[250px] flex-none">
+        <div>
+            <div class="pl-3 flex flex-col justify-center items-start">
+                {#each sidePaneElements as element}
+                    <Accordion
+                        item={element.item}
+                    />
+                {/each}
+            </div>
+        </div>
     </div>
 
-    <div class="content h-screen bg-[#FFFFFF] col-span-5">
+    <div class="content h-screen bg-[#FFFFFF] flex-grow">
         <section class="banner mb-6">
             <div class="flex justify-center overflow-hidden mb-4">
                 <img src="/images/banner.webp" alt="" class="object-cover w-full hover:scale-105 duration-500 hover:cursor-pointer">
@@ -34,8 +56,9 @@
             <header class="flex justify-between pr-3 mb-4">
                 <div class="view-as">
                     <SelectMenu 
-                        menuItems={["Rows", "Col-1", "Col-2", "Col-3", "Col-4"]}
+                        menuItems={["Rows", "Col-2", "Col-3", "Col-4"]}
                         placeHolder={"view as"}
+                        onValueChange={handleViewAs}
                     />
                 </div>
                 <div class="flex gap-4">
@@ -59,7 +82,7 @@
             <div class="products-content p-4 mb-24">
                 <div class={`grid gap-4 gap-y-16
                     ${
-                        viewAs === "Col-1"? "grid-cols-1" :
+                        viewAs === "Rows"? "grid-cols-1" :
                         viewAs === "Col-2"? "grid-cols-2" :
                         viewAs === "Col-3"? "grid-cols-3" :
                         viewAs === "Col-4"? "grid-cols-4" :
