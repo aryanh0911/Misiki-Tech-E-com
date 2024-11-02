@@ -27,12 +27,12 @@
 <div class="flex gap-x-3">
 
     <!-- Side Panel -->
-    <div class="side-pane h-screen bg-slate-300 pt-8 min-w-[250px] flex-none">
+    <div class="side-pane h-screen  pt-8 min-w-[250px] flex-none">
         <div>
             <div class="pl-3 flex flex-col justify-center items-start">
                 {#each sidePaneElements as element}
                     <Accordion
-                        item={element.item}
+                        accordionTitle={element.item}
                     />
                 {/each}
             </div>
