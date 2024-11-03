@@ -18,6 +18,7 @@
 		"bits-ui": "^0.21.16",
 		"clsx": "^2.1.1",
 		"embla-carousel-svelte": "^8.3.1",
+		"lucide-svelte": "^0.454.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"prettier-plugin-tailwindcss": "^0.6.5",
@@ -32,7 +33,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"remixicon": "^4.5.0",
-		"lucide-svelte": "^0.454.0"
+		"remixicon": "^4.5.0"
 	}
 }
