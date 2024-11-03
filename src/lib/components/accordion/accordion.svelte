@@ -1,7 +1,14 @@
 <script lang="ts">
     import * as Accordion from "$lib/components/ui/accordion"
+	import AvailabilityContent from "./content/availability-content/availability-content.svelte";
+	import BrandContent from "./content/Brand/brand-content.svelte";
     import CategoriesContent from "./content/categories-content/categories-content.svelte";
+	import ColorContent from "./content/color-content/color-content.svelte";
+	import FeaturedProductsContent from "./content/featuredProducts-content/featuredProducts-content.svelte";
+	import MoreFiltersContent from "./content/moreFilters-content/moreFilters-content.svelte";
     import PriceContent from "./content/price-content/price-content.svelte";
+	import ProductTypeContent from "./content/productType-content/productType-content.svelte";
+	import SizeContent from "./content/size-content/size-content.svelte";
 
     //Props
     export let accordionTitle: string;
@@ -36,7 +43,7 @@
         <Accordion.Item value="item-3">
             <Accordion.Trigger>{accordionTitle}</Accordion.Trigger>
             <Accordion.Content>
-                <p>Brand</p>
+                <BrandContent />
             </Accordion.Content>
         </Accordion.Item>
     {/if}
@@ -46,7 +53,7 @@
         <Accordion.Item value="item-4">
             <Accordion.Trigger>{accordionTitle}</Accordion.Trigger>
             <Accordion.Content>
-                <p>Product Type</p>
+                <ProductTypeContent />
             </Accordion.Content>
         </Accordion.Item>
     {/if}
@@ -56,7 +63,7 @@
         <Accordion.Item value="item-5">
             <Accordion.Trigger>{accordionTitle}</Accordion.Trigger>
             <Accordion.Content>
-                <p>Availability</p>
+                <AvailabilityContent/>   
             </Accordion.Content>
         </Accordion.Item>
     {/if}
@@ -66,7 +73,7 @@
         <Accordion.Item value="item-6">
             <Accordion.Trigger>{accordionTitle}</Accordion.Trigger>
             <Accordion.Content>
-                <p>Color</p>
+                <ColorContent />
             </Accordion.Content>
         </Accordion.Item>
     {/if}
@@ -76,7 +83,7 @@
         <Accordion.Item value="item-7">
             <Accordion.Trigger>{accordionTitle}</Accordion.Trigger>
             <Accordion.Content>
-                <p>Size</p>
+                <SizeContent />
             </Accordion.Content>
         </Accordion.Item>
     {/if}
@@ -86,7 +93,7 @@
         <Accordion.Item value="item-8">
             <Accordion.Trigger>{accordionTitle}</Accordion.Trigger>
             <Accordion.Content>
-                <p>More Filters</p>
+                <MoreFiltersContent />
             </Accordion.Content>
         </Accordion.Item>
     {/if}
@@ -96,7 +103,7 @@
         <Accordion.Item value="item-9">
             <Accordion.Trigger>{accordionTitle}</Accordion.Trigger>
             <Accordion.Content>
-                <p>Featured Products</p>
+                <FeaturedProductsContent />
             </Accordion.Content>
         </Accordion.Item>
     {/if}
